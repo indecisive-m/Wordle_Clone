@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/91ee74ef8e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="wordle-apple-touch-icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">     <title>Wordle Clone</title>
+</head>
+<body>
+    <div class="section">
+        <header>
+            <h1>Wordle</h1>
+        </header>
+        <main>
+            <div class="box-container">
+                <p class="not-in-word-list hidden">Not in word list</p>
+                <p class="not-enough-letters hidden">Not enough letters</p>
+                <div class="grid-row" id="grid-row" data-index="0" >
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="grid-row" id="grid-row-two" data-index="1">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="grid-row" id="grid-row-three" data-index="2">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="grid-row" id="grid-row-four" data-index="3">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="grid-row" id="grid-row-five" data-index="4">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="grid-row" id="grid-row-six" data-index="5">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="keyboard-container" id="keyboard">
+                <div class="row-one">
+                    <button class="qwerty">q</button>
+                    <button class="qwerty">w</button>
+                    <button class="qwerty">e</button>
+                    <button class="qwerty">r</button>
+                    <button class="qwerty">t</button>
+                    <button class="qwerty">y</button>
+                    <button class="qwerty">u</button>
+                    <button class="qwerty">i</button>
+                    <button class="qwerty">o</button>
+                    <button class="qwerty">p</button>
+                </div>
+                <div class="row-two">
+                    <button class="qwerty">a</button>
+                    <button class="qwerty">s</button>
+                    <button class="qwerty">d</button>
+                    <button class="qwerty">f</button>
+                    <button class="qwerty">g</button>
+                    <button class="qwerty">h</button>
+                    <button class="qwerty">j</button>
+                    <button class="qwerty">k</button>
+                    <button class="qwerty">l</button>
+                </div>
+                <div class="row-three">
+                    <button class="qwerty enter" id="enter">enter</button>
+                    <button class="qwerty">z</button>
+                    <button class="qwerty">x</button>
+                    <button class="qwerty">c</button>
+                    <button class="qwerty">v</button>
+                    <button class="qwerty">b</button>
+                    <button class="qwerty">n</button>
+                    <button class="qwerty" id="m-key">m</button>
+                    <button class="qwerty backspace" id="backspace"><i class="fa-solid fa-delete-left"></i></button>
+                </div>
+            </div>
+
+            <div class="lost-container hidden">
+                <div class="grid-row lost-grid-row">
+                    <div class="you-grid-row">
+                        <div class="box">Y</div>
+                        <div class="box">O</div>
+                        <div class="box">U</div>
+                        <div class="box sm-hidden"></div>
+                    </div>
+                    <div class="lose-win-grid-row">
+                        <div class="box">L</div>
+                        <div class="box">O</div>
+                        <div class="box">S</div>
+                        <div class="box">E</div>
+                    </div>
+                </div>
+                <div class="lost-text hidden">
+                    <p class="text">The word was:</p>
+                    <div class="word"></div>
+                    <button class="restart" id="restart">Try again?</button>
+                </div>
+            </div>
+
+            <div class="won-container hidden">
+                <div class="grid-row won-grid-row">
+                    <div class="you-win-grid-row">
+                        <div class="box">Y</div>
+                        <div class="box">O</div>
+                        <div class="box">U</div>
+                        <div class="box sm-hidden"></div>
+                    </div>
+                    <div class="lose-win-grid-row">
+                        <div class="box">W</div>
+                        <div class="box">I</div>
+                        <div class="box">N</div>
+                    </div>
+                </div>
+                <div class="won-text hidden">
+                    <button class="restart" id="new-game">New Game</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
