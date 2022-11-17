@@ -51,17 +51,14 @@ qwerty.forEach(letter => {
 
 // * Get Word From API 
 
-// const getWordFromApi = async () => {
-//     const getDataFromApi =  await fetch(wordleApiUrl)
-//     const res = await getDataFromApi.json();
-//     wordleWord = res.Response
-//     console.log(wordleWord)
-//     return wordleWord
-// }
+const getWordFromApi = async () => {
+    const getDataFromApi =  await fetch(wordleApiUrl)
+    const res = await getDataFromApi.json();
+    wordleWord = res.Response
+    console.log(wordleWord)
+    return wordleWord
+}
 
-wordleWord = 'lilac'
-
-console.log(wordleWord)
 
 // * Checks if Inputted Word is in API - feels sloppy atm
 
@@ -231,4 +228,4 @@ const wonGame = () => {
 wonText.classList.remove('hidden')
 }
 
-// getWordFromApi()
+getWordFromApi()
