@@ -506,7 +506,7 @@ i {
         margin-bottom: 0.5rem;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
+        cursor: default;
     }
 
     .enter,
@@ -574,5 +574,9 @@ i {
     .you-grid-row > .sm-hidden{
         display: none;
    }
+
+   .restart {
+    cursor: default;
+}
 
 }
