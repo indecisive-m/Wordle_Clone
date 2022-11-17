@@ -283,6 +283,11 @@ i {
     border: 2px solid var(--clr-accent-600);
 }
 
+.win-win-grid-row > .box {
+    background-color: var(--clr-accent-400);
+    
+}
+
 .lose-win-grid-row {
     display: flex;
     gap: 5px;
